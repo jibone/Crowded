@@ -1,0 +1,18 @@
+/*
+ | -------------------------------------------------------------------
+ | reset.css
+ | Created by J Shamsul Bahri on 2008-09-06.
+ | Copyright 2008 Jiboneus.com. All rights reserved.
+ | -------------------------------------------------------------------
+ | This css styles will reset all the styles making it the same 
+ | throughout various browsers.
+ |
+*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td { margin:0;padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+ol,ul { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6{ font-size:100%; }
+q:before,q:after{ content:''; }

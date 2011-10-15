@@ -1,0 +1,146 @@
+// -- some variables ---------------------------------
+$textcolor: #000000;
+$blue: #0cbadf;
+$link: #2398c9;
+
+$fontsansserif: Helvetica, Verdana, Arial, sans-serif;
+
+// -- some mixins ------------------------------------
+@mixin shadowed($h: 5px, $v: 5px, $b: 5px, $c: #000) {
+	-moz-box-shadow: $h $v $b $c;
+	-webkit-box-shadow: $h $v $b $c;
+	box-shadow: $h $v $b $c;
+}
+
+// -- basic styles -----------------------------------
+* { margin: 0; padding: 0; }
+body {
+	margin: 0;
+	text-align: center;
+	background: #DDD url('../images/soft_wallpaper.png') repeat top left;
+	color: $textcolor;
+	font: {
+		family: $fontsansserif;
+		size: 13px;
+	}
+}
+a {
+	color: $link;
+	text-decoration: none;
+	&:hover {
+		color: darken($link, 20%);
+	}
+}
+.pageContainer {
+	width: 930px;
+	margin: auto;
+	overflow: hidden;
+	text-align: left;
+}
+
+// -- header styles ------------------------------------------------------
+#headerContainer {
+	overflow: hidden;
+	border-top: 4px solid $blue;
+	padding-left: 5px;
+	.logo {
+		padding: 10px 0px 15px 0px;
+		font-size: 28px;
+		float: left;
+	}
+}
+
+
+// -- body styles
+#bodyContainer {
+	overflow: hidden;
+
+	// -- content styles
+	#contentContainer {
+		width: 600px;
+		float: left;
+		
+		// -- map canvas style
+		#map_canvas {
+			padding: 5px;
+			margin: 5px;
+			height: 300px;
+			@include shadowed(0px, 0px, 5px, #888);
+		}
+		
+		.boxList { padding: 5px; }
+		
+		.venuesListContainer {
+			overflow: hidden;
+			ul.venuesList {
+				overflow: hidden;
+				border-top: 1px solid lighten($textcolor, 70%);
+				border-bottom: 1px solid lighten($textcolor, 98%);
+				li {
+					overflow: hidden;
+					padding: 5px 0px 5px 0px;
+					border-bottom: 1px solid lighten($textcolor, 70%);
+					border-top: 1px solid lighten($textcolor, 98%);
+					span.venueIcon {
+						width: 32px;
+						height: 32px;
+						display: block;
+						float: left;
+						margin-right: 10px;
+						margin-left: 5px;
+					}
+					span.venueName { 
+						font-size: 16px;
+						width: 480px;
+						display: block;
+						float: left;
+						padding: 3px 0px 0px 0px;
+						margin-top: 10px;
+					}
+					span.venueNum {
+						width: 50px;
+						text-align: center;
+						float: right;
+						margin-top: 3px;
+						margin-right: 5px;
+						div.num { font-size: 22px; }
+						div.text { font-size: 9px; }
+					}
+				}
+			}
+		}
+	}
+	
+	// -- sidebar container
+	#sidebarContainer {
+		width: 310px;
+		float: right;
+		
+		// -- form container
+		.formContainer {
+			overflow: hidden;
+			margin-bottom: 20px;
+			padding: 5px;
+			input {
+				outline: none;
+				border: 1px solid #fff;
+				background-color: #fff;
+				padding: 3px 5px 4px 5px;
+				font-size: 14px;
+				@include shadowed(0px, 0px, 5px, #888);
+			}
+			input.button {
+				border: none;
+				background-color: #151515;
+				padding: 3px 10px 4px 10px;
+				color: #f5f5f5;
+				text-shadow: #DDD 1px 1px 2px;
+				cursor: pointer;
+				&:hover {
+					background-color: #aaa;
+					color: #151515;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+
+	<div class="venuesListContainer">
+		<ul class="venuesList">
+		
+		<% if(response.venues.length > 0) { %> 
+		
+			<% for(var i = 0; i < response.venues.length; i++) { %>
+				
+			<li>
+				
+				<% if(response.venues[i].categories.length > 0 ) { %>
+					
+					<span class="venueIcon"><img src="<%= response.venues[i].categories[0].icon %>" /></span>
+				
+				<% } else { %>
+				
+					<span class="venueIcon"><img src="" /></span>
+					
+				<% } %>
+				
+				<span class="venueName"><a href="venue/<%= response.venues[i].id %>"><%= response.venues[i].name %></a></span>
+				<span class="venueNum">
+					<div class="num"><%= response.venues[i].hereNow.count %></div>
+					<div class="text">checkins</div>
+				</span>
+			</li>
+				
+			<% } %>
+		
+		<% } else { %>
+		
+			<li><span class="noVenues">No Trending Venues</span></li>
+		
+		<% } %>
+		
+		</ul>
+	</div>
