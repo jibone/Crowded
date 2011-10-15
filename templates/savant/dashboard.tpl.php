@@ -24,7 +24,10 @@
 		<div class="sidebarPanel">
 			<div class="title">About this website</div>
 			<div class="text">
-				<p>Bla bla bal</p>
+				<p>Crowded is a silly little website that tries to find crowded 
+				places. It checks for Foursquare checkins and display each of 
+				the checkins on the map in a cluster. This way you would know 
+				where are the places with most checkins.</p>
 			</div>
 		</div>
 	</div><!-- sidebar container ends -->

@@ -70,6 +70,7 @@ a {
 		
 		.boxList { padding: 5px; }
 		
+		// -- venue list style
 		.venuesListContainer {
 			overflow: hidden;
 			ul.venuesList {
@@ -106,6 +107,38 @@ a {
 						div.num { font-size: 22px; }
 						div.text { font-size: 9px; }
 					}
+				}
+			}
+		}
+		
+		// -- venue title
+		.venueTitle {
+			margin-bottom: 10px;
+			p { 
+				font-size: 32px;
+				a {
+					color: $textcolor;
+				}
+			}
+		}
+		
+		// -- venue details
+		.venueDetails {
+			overflow: hidden;
+			
+			.venueAddress {
+				width: 400px;
+				float: left;
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			.venueContacts {
+				@extend .venueAddress;
+				font-size: 14px;
+				.label { 
+					font-size: 10px;
+					text-transform: uppercase;
+					margin-bottom: 3px;
 				}
 			}
 		}

@@ -29,7 +29,6 @@ function initialize_map() {
 			
 			$.getJSON(pathname + "4sq/trending/" + position.coords.latitude +"/"+ position.coords.longitude, function(data) {
 				var data_obj = jQuery.parseJSON(data)
-				console.log(data_obj);
 				
 				// -- load venues list
 				html = new EJS({url: 'templates/ejs/venues.ejs'}).render(data_obj);
@@ -69,7 +68,6 @@ function initialize_map() {
 							// -- get area trending venue. 
 							$.getJSON(pathname + "4sq/trending/" + center.Ma +"/"+ center.Na, function(data) {
 								var data_obj = jQuery.parseJSON(data);
-								console.log(data_obj);
 								
 								if(data_obj == null) {
 									$("#venueList").html("");
@@ -81,7 +79,6 @@ function initialize_map() {
 								
 								// -- go throught each venues
 								var venues = data_obj.response.venues;
-								console.log(venues);
 								for(var i = 0; i < venues.length; i++) {
 									// set new markers points
 									var latlng = new google.maps.LatLng(venues[i].location.lat, venues[i].location.lng);
@@ -91,7 +88,6 @@ function initialize_map() {
 									}
 								}
 								markerCluster.addMarkers(markers);
-								//markerCluster = new MarkerClusterer(map, markers);
 							});
 						} else {
 							console.log("Geocode fail");
@@ -124,23 +120,28 @@ function initialize_map() {
 		$.getJSON(pathname + "4sq/trending/" + center.Ma +"/"+ center.Na, function(data) {
 			var data_obj = jQuery.parseJSON(data);
 			
-			// -- load venues list
-			html = new EJS({url: 'templates/ejs/venues.ejs'}).render(data_obj);
-			$("#venueList").html(html);
-			
-			// -- go throught each venues
-			var venues = data_obj.response.venues;
-			console.log(venues);
-			for(var i = 0; i < venues.length; i++) {
-				// set new markers points
-				var latlng = new google.maps.LatLng(venues[i].location.lat, venues[i].location.lng);
-				for(var k = 0; k < venues[i].hereNow.count; k++) {
-					var marker = new google.maps.Marker({position: latlng});
-					markers.push(marker);
+			if(typeof data_obj.status != 'undefined') {
+				if(data_obj.status == 'error') {
+					console.log("timeout error");
 				}
+			} else {
+				// -- load venues list
+				html = new EJS({url: 'templates/ejs/venues.ejs'}).render(data_obj);
+				$("#venueList").html(html);
+				
+				// -- go throught each venues
+				var venues = data_obj.response.venues;
+				for(var i = 0; i < venues.length; i++) {
+					// set new markers points
+					var latlng = new google.maps.LatLng(venues[i].location.lat, venues[i].location.lng);
+					for(var k = 0; k < venues[i].hereNow.count; k++) {
+						var marker = new google.maps.Marker({position: latlng});
+						markers.push(marker);
+					}
+				}
+				markerCluster.addMarkers(markers);
 			}
-			markerCluster.addMarkers(markers);
-			//markerCluster = new MarkerClusterer(map, markers);
+			
 		});
 	});
 }
