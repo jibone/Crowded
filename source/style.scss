@@ -188,12 +188,69 @@ a {
 			}
 			
 		}
+		
+		.venueTips {
+			overflow: hidden;
+			.tip {
+				overflow: hidden;
+				padding: 5px 0px 5px 0px;
+				border-top: 1px solid lighten($textcolor, 98%);
+				border-bottom: 1px solid lighten($textcolor, 70%);
+				
+				.profilePic {
+					width: 70px;
+					height: 70px;
+					padding: 5px;
+					float: left;
+					img {
+						width: 60px;
+						height: 60px;
+						@include shadowed(0px, 0px, 5px, #888);
+					}
+				}
+				
+				.content {
+					width: 510px;
+					float: right;
+					font-family: $fontserif;
+					font-size: 16px;
+					line-height: 24px;
+					text-shadow: #fff 1px 1px 1px;
+					.user {
+						margin-bottom: 10px;
+						.firstname {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	// -- sidebar container
 	#sidebarContainer {
 		width: 310px;
 		float: right;
+		
+		.sidebarPanel {
+			overflow: hidden;
+			.title {
+				font-family: $fontserif;
+				font-size: 19px;
+				font-weight: bold;
+				text-shadow: #fff 1px 1px 1px;
+				margin-bottom: 5px;
+			}
+			.text {
+				p {
+					font-family: $fontserif;
+					font-size: 14px;
+					line-height: 18px;
+					text-shadow: #fff 1px 1px 1px;
+					margin-bottom: 15px;
+				}
+			}
+		}
 		
 		// -- form container
 		.formContainer {
@@ -228,6 +285,34 @@ a {
 			margin: 5px;
 			height: 200px;
 			@include shadowed(0px, 0px, 5px, #888);
+		}
+		
+		// -- mayor container style 
+		.mayorContainer {
+			overflow: hidden;
+			padding: 5px 0px 5px 0px;
+			
+			.profilePic {
+				width: 70px;
+				height: 70px;
+				padding: 5px;
+				float: left;
+				img {
+					width: 60px;
+					height: 60px;
+					@include shadowed(0px, 0px, 5px, #888);
+				}
+			}
+			
+			.user {
+				width: 230px;
+				float: right;
+				margin-top: 5px;
+				font-family: $fontserif;
+				font-size: 14px;
+				text-shadow: #fff 1px 1px 1px;
+				.name { font-weight: bold; }
+			}
 		}
 	}
 }

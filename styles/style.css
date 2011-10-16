@@ -37,9 +37,24 @@ a:hover { color: #145672; }
 #bodyContainer #contentContainer .venuePhotos a img { margin: 0px; }
 #bodyContainer #contentContainer .venueDescription { overflow: hidden; padding: 10px 0px 10px 0px; border-top: 1px solid #fafafa; border-bottom: 1px solid #b3b3b3; }
 #bodyContainer #contentContainer .venueDescription p { font-family: "TeX Gyre Schola", "Georgia", "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", "Times", serif; font-size: 19px; line-height: 24px; text-shadow: #fff 1px 1px 1px; }
+#bodyContainer #contentContainer .venueTips { overflow: hidden; }
+#bodyContainer #contentContainer .venueTips .tip { overflow: hidden; padding: 5px 0px 5px 0px; border-top: 1px solid #fafafa; border-bottom: 1px solid #b3b3b3; }
+#bodyContainer #contentContainer .venueTips .tip .profilePic { width: 70px; height: 70px; padding: 5px; float: left; }
+#bodyContainer #contentContainer .venueTips .tip .profilePic img { width: 60px; height: 60px; -moz-box-shadow: 0px 0px 5px #888888; -webkit-box-shadow: 0px 0px 5px #888888; box-shadow: 0px 0px 5px #888888; }
+#bodyContainer #contentContainer .venueTips .tip .content { width: 510px; float: right; font-family: "TeX Gyre Schola", "Georgia", "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", "Times", serif; font-size: 16px; line-height: 24px; text-shadow: #fff 1px 1px 1px; }
+#bodyContainer #contentContainer .venueTips .tip .content .user { margin-bottom: 10px; }
+#bodyContainer #contentContainer .venueTips .tip .content .user .firstname { font-weight: bold; }
 #bodyContainer #sidebarContainer { width: 310px; float: right; }
+#bodyContainer #sidebarContainer .sidebarPanel { overflow: hidden; }
+#bodyContainer #sidebarContainer .sidebarPanel .title { font-family: "TeX Gyre Schola", "Georgia", "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", "Times", serif; font-size: 19px; font-weight: bold; text-shadow: #fff 1px 1px 1px; margin-bottom: 5px; }
+#bodyContainer #sidebarContainer .sidebarPanel .text p { font-family: "TeX Gyre Schola", "Georgia", "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", "Times", serif; font-size: 14px; line-height: 18px; text-shadow: #fff 1px 1px 1px; margin-bottom: 15px; }
 #bodyContainer #sidebarContainer .formContainer { overflow: hidden; margin-bottom: 20px; padding: 5px; }
 #bodyContainer #sidebarContainer .formContainer input { outline: none; border: 1px solid #fff; background-color: #fff; padding: 3px 5px 4px 5px; font-size: 14px; -moz-box-shadow: 0px 0px 5px #888888; -webkit-box-shadow: 0px 0px 5px #888888; box-shadow: 0px 0px 5px #888888; }
 #bodyContainer #sidebarContainer .formContainer input.button { border: none; background-color: #151515; padding: 3px 10px 4px 10px; color: #f5f5f5; text-shadow: #DDD 1px 1px 2px; cursor: pointer; }
 #bodyContainer #sidebarContainer .formContainer input.button:hover { background-color: #aaa; color: #151515; }
 #bodyContainer #sidebarContainer #minimap_canvas { padding: 5px; margin: 5px; height: 200px; -moz-box-shadow: 0px 0px 5px #888888; -webkit-box-shadow: 0px 0px 5px #888888; box-shadow: 0px 0px 5px #888888; }
+#bodyContainer #sidebarContainer .mayorContainer { overflow: hidden; padding: 5px 0px 5px 0px; }
+#bodyContainer #sidebarContainer .mayorContainer .profilePic { width: 70px; height: 70px; padding: 5px; float: left; }
+#bodyContainer #sidebarContainer .mayorContainer .profilePic img { width: 60px; height: 60px; -moz-box-shadow: 0px 0px 5px #888888; -webkit-box-shadow: 0px 0px 5px #888888; box-shadow: 0px 0px 5px #888888; }
+#bodyContainer #sidebarContainer .mayorContainer .user { width: 230px; float: right; margin-top: 5px; font-family: "TeX Gyre Schola", "Georgia", "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", "Times", serif; font-size: 14px; text-shadow: #fff 1px 1px 1px; }
+#bodyContainer #sidebarContainer .mayorContainer .user .name { font-weight: bold; }

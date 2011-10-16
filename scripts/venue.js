@@ -19,7 +19,7 @@ function initialize_map() {
 	venueLocation = new google.maps.LatLng(lat, lng);
 	// set the map
 	var myOptions = {
-		zoom: 15,
+		zoom: 17,
 		center: venueLocation,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};

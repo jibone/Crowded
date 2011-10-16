@@ -115,6 +115,34 @@
 			
 		<?php endif; ?><!-- // venue description container ends -->
 		
+		<!-- venue tips container start -->
+		<?php if(isset($venue->tips)): $tips = $venue->tips->groups[0]->items; ?>
+			
+		<div class="venueTips">
+			
+			<?php $c = count($tips); for($i = 0; $i < $c; $i++): ?>
+				
+			<div class="tip">
+				<div class="profilePic">
+					<img src="<?php echo $tips[$i]->user->photo; ?>">
+				</div>
+				<div class="content">
+					<div class="user">
+						<span class="firstname"><?php echo $tips[$i]->user->firstName; ?></span>
+						<span class="location">(<?php echo $tips[$i]->user->homeCity; ?>)</span>
+					</div>
+					<div class="text">
+						<p><?php echo $tips[$i]->text; ?></p>
+					</div>
+				</div>
+			</div>
+				
+			<?php endfor; ?>
+			
+		</div>
+			
+		<?php endif; ?><!-- // venue description container ends -->
+		
 	</div><!-- // content container ends -->
 	
 	<!-- sidebar container start -->
@@ -126,6 +154,23 @@
 			data-venuename="<?php echo $venue->name; ?>">
 			Map loading...
 		</div><!-- // mini map container ends -->
+		
+		<?php if(isset($venue->mayor)): ?>
+		<!-- mayor container star -->
+		<div class="mayorContainer">
+			<div class="profilePic">
+				<img src="<?php echo $venue->mayor->user->photo ?>" />
+			</div>
+			<div class="user">
+				<div class="name"><?php echo $venue->mayor->user->firstName; ?> <?php if(isset($venue->mayor->user->lastName)) { echo $venue->mayor->user->lastName; } ?></div>
+				<div class="location"><?php echo $venue->mayor->user->homeCity; ?></div>
+				<div class="label">Venue Mayor</div>
+			</div>
+		</div><!-- // mayor container ends -->
+		<?php endif; ?>
+		
+		<a href="<?php echo $this->base_url; ?>" class="linkbtn">&larr; Back</a>
+
 	</div><!-- // sidebar container ends -->
 	
 	<?php else: ?>
