@@ -9,17 +9,39 @@
 			
 			<?php if(isset($venue->url)): ?>
 				
-			<p><a href="<?php echo $venue->url; ?>"><?php echo $venue->name; ?></a></p>
+			<div class="title"><a href="<?php echo $venue->url; ?>"><?php echo $venue->name; ?></a></div>
 				
 			<?php else: ?>
 			
-			<p><a href="<?php echo $venue->canonicalUrl; ?>"><?php echo $venue->name; ?></a></p>
+			<div class="title"><a href="<?php echo $venue->canonicalUrl; ?>"><?php echo $venue->name; ?></a></div>
 			
 			<?php endif; ?>
-
+			
+			<div class="checkins">
+				<div class="num"><?php echo $venue->hereNow->count; ?></div>
+				<div class="text">Checkins</div>
+			</div>
 		</div>
 		
 		<div class="venueDetails">
+			
+			<?php if(isset($venue->categories)): ?>
+			
+			<div class="venueCategories">
+				
+				<?php $c = count($venue->categories); for($i = 0; $i < $c; $i++):  ?>
+				
+				<span class="icon">
+					<img src="<?php echo $venue->categories[$i]->icon; ?>" 
+						 alt="<?php echo $venue->categories[$i]->pluralName; ?>"
+						 title="<?php echo $venue->categories[$i]->pluralName; ?>" />
+					</span>
+				
+				<?php endfor; ?>
+				
+			</div>
+			
+			<?php endif; ?>
 			
 			<?php if(isset($venue->location)): ?>
 			
@@ -57,20 +79,6 @@
 				<?php if(isset($venue->contact->twitter)): ?>
 					<div class="twitter"><span class="label">Twitter: </span><a href="http://twitter.com/<?php echo $venue->contact->twitter; ?>">@<?php echo $venue->contact->twitter; ?></a></div>
 				<?php endif; ?>
-			</div>
-			
-			<?php endif; ?>
-			
-			<?php if(isset($venue->categories)): ?>
-			
-			<div class="venueCategories">
-				
-				<?php $c = count($venue->categories); for($i = 0; $i < count(); $i++):  ?>
-				
-				<span class="icon"></span>
-				
-				<?php endfor; ?>
-				
 			</div>
 			
 			<?php endif; ?>
