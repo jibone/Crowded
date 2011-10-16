@@ -37,4 +37,16 @@
 				<p>Thanks.</p>
 			</div>
 		</div>
+		
+		<div class="socialButtons">
+			</span class="twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+			</span>
+			<span class="google">
+				<g:plusone size="medium"></g:plusone>
+			</span>
+			<span class="facebook">
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flab.jshamsul.com%2Fcrowded&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=128979620479922" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+			</span>
+		</div>
 	</div><!-- sidebar container ends -->

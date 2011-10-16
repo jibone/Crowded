@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<title><?php $this->eprint($this->window_title); ?></title>
@@ -21,6 +21,23 @@
 	<?php if($this->page_content == "venue"): ?>
 	<script type="text/javascript" src="<?php echo $this->base_url; ?>scripts/venue.js"></script>
 	<?php endif; ?>
+	
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	
+	<!-- some snippet stuff -->
+	<link rel="image_src" href="<?php echo $this->base_url ?>images/thumb.png" />
+	<meta itemprop="name" content="Crowded">
+	<meta itemprop="description" 
+		content="Crowded is a silly little website that tries to find crowded places. 
+		It checks for Foursquare checkins and display it on the map in groups. This 
+		way you know where are the places with most checkins.">
+	<meta itemprop="image" content="<?php echo $this->base_url ?>images/thumb.png">
 	
 </head>
 <body>
