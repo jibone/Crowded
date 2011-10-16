@@ -102,9 +102,19 @@
 				
 			<?php endfor; ?>
 			
-		</div><!-- // venue photos container ends -->
+		</div>
 			
-		<?php endif; ?>
+		<?php endif; ?><!-- // venue photos container ends -->
+		
+		<!-- venue description container start -->
+		<?php if(isset($venue->description)): ?>
+			
+		<div class="venueDescription">
+			<p><?php echo $venue->description; ?></p>
+		</div>
+			
+		<?php endif; ?><!-- // venue description container ends -->
+		
 	</div><!-- // content container ends -->
 	
 	<!-- sidebar container start -->

@@ -35,6 +35,8 @@ a:hover { color: #145672; }
 #bodyContainer #contentContainer .venuePhotos { overflow: hidden; padding: 10px 0px 10px 0px; border-top: 1px solid #fafafa; border-bottom: 1px solid #b3b3b3; }
 #bodyContainer #contentContainer .venuePhotos a { overflow: hidden; display: block; width: 100px; margin: 0px; float: left; }
 #bodyContainer #contentContainer .venuePhotos a img { margin: 0px; }
+#bodyContainer #contentContainer .venueDescription { overflow: hidden; padding: 10px 0px 10px 0px; border-top: 1px solid #fafafa; border-bottom: 1px solid #b3b3b3; }
+#bodyContainer #contentContainer .venueDescription p { font-family: "TeX Gyre Schola", "Georgia", "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", "Times", serif; font-size: 19px; line-height: 24px; text-shadow: #fff 1px 1px 1px; }
 #bodyContainer #sidebarContainer { width: 310px; float: right; }
 #bodyContainer #sidebarContainer .formContainer { overflow: hidden; margin-bottom: 20px; padding: 5px; }
 #bodyContainer #sidebarContainer .formContainer input { outline: none; border: 1px solid #fff; background-color: #fff; padding: 3px 5px 4px 5px; font-size: 14px; -moz-box-shadow: 0px 0px 5px #888888; -webkit-box-shadow: 0px 0px 5px #888888; box-shadow: 0px 0px 5px #888888; }
