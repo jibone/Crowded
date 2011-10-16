@@ -7,7 +7,6 @@
 //  Copyright 2011 jShamsul.com. All rights reserved.
 // 
 
-
 // -- load required files ---------------------------*/
 require_once 'system/Slim/Slim.php';
 require_once 'system/Savant3/Savant3.php';
@@ -31,16 +30,22 @@ $tpl->base_url = substr($_SERVER['PHP_SELF'], 0, -9);
 
 
 // -- start app -------------------------------------*/
-$app->get('/', function () use ($tpl) {
+$app->get('/', 'index');
+function index() {
+	
+	global $tpl;
 	
 	$tpl->window_title = "Crowded";
 	$tpl->page_content = "dashboard";
 	
 	$tpl->display($tpl->path);
 	
-});
+}
 
-$app->get('/venue/:venue_id', function ($venue_id) use ($app, $tpl) {
+$app->get('/venue/:venue_id', 'venue'); 
+function venue($venue_id) {
+	
+	global $tpl;
 	
 	// -- get venue data
 	$id = c::get('4sq_id');
@@ -61,10 +66,13 @@ $app->get('/venue/:venue_id', function ($venue_id) use ($app, $tpl) {
 	$tpl->page_content = "venue";
 	$tpl->display($tpl->path);
 	
-});
+}
 
 // -- fetch trending places from 4sq
-$app->get('/4sq/trending/:lat/:long', function ($lat, $long) use ($app, $tpl) {
+$app->get('/4sq/trending/:lat/:long', 'fetch'); 
+function fetch($lat, $long) {
+	
+	global $tpl;
 	
 	$id = c::get('4sq_id');
 	$secret = c::get('4sq_secret');	
@@ -74,7 +82,7 @@ $app->get('/4sq/trending/:lat/:long', function ($lat, $long) use ($app, $tpl) {
 	header("Content-Type: application/json");
 	echo json_encode($data);
 	
-});
+}
 
 $app->run();
 

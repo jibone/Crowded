@@ -54,15 +54,15 @@ class remote {
 		$ch = curl_init();
 
 		$params = array(
-			CURLOPT_URL 						=> $url,
+			CURLOPT_URL 			=> $url,
 			CURLOPT_RETURNTRANSFER	=> true,
-			CURLOPT_FOLLOWLOCATION	=> true,
-			CURLOPT_ENCODING 				=> $options['encoding'],
-			CURLOPT_USERAGENT 			=> $options['agent'],
-			CURLOPT_AUTOREFERER			=> true,
+			CURLOPT_FOLLOWLOCATION	=> false,
+			CURLOPT_ENCODING 		=> $options['encoding'],
+			CURLOPT_USERAGENT 		=> $options['agent'],
+			CURLOPT_AUTOREFERER		=> true,
 			CURLOPT_CONNECTTIMEOUT	=> $options['timeout'],
-			CURLOPT_TIMEOUT 				=> $options['timeout'],
-			CURLOPT_MAXREDIRS 			=> 10,
+			CURLOPT_TIMEOUT 		=> $options['timeout'],
+			CURLOPT_MAXREDIRS 		=> 10,
 			CURLOPT_SSL_VERIFYPEER	=> false,
 		);
 
