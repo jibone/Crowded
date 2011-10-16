@@ -23,6 +23,7 @@
 			</div>
 		</div>
 		
+		<!-- venue details container start -->
 		<div class="venueDetails">
 			
 			<?php if(isset($venue->categories)): ?>
@@ -35,7 +36,7 @@
 					<img src="<?php echo $venue->categories[$i]->icon; ?>" 
 						 alt="<?php echo $venue->categories[$i]->pluralName; ?>"
 						 title="<?php echo $venue->categories[$i]->pluralName; ?>" />
-					</span>
+				</span>
 				
 				<?php endfor; ?>
 				
@@ -83,8 +84,28 @@
 			
 			<?php endif; ?>
 			
-		</div>
-	</div><!-- content container ends -->
+		</div><!-- // venue details container ends -->
+		
+		
+		<!-- venue photos container start -->
+		<?php if(isset($venue->photos)): $photos = $venue->photos->groups[1]->items; ?>
+			
+		<div class="venuePhotos">
+			
+			<?php $c = count($photos); for($i = 0; $i < $c; $i++): ?>
+				
+			
+			<a href="<?php echo $photos[$i]->url; ?>">
+			<img src="<?php echo $photos[$i]->sizes->items[2]->url; ?>" width="100" height="100" />
+			</a>
+			
+				
+			<?php endfor; ?>
+			
+		</div><!-- // venue photos container ends -->
+			
+		<?php endif; ?>
+	</div><!-- // content container ends -->
 	
 	<!-- sidebar container start -->
 	<div id="sidebarContainer">
@@ -94,8 +115,8 @@
 			data-lng="<?php echo $venue->location->lng; ?>" 
 			data-venuename="<?php echo $venue->name; ?>">
 			Map loading...
-		</div><!-- mini map container ends -->
-	</div><!-- sidebar container ends -->
+		</div><!-- // mini map container ends -->
+	</div><!-- // sidebar container ends -->
 	
 	<?php else: ?>
 	
@@ -104,6 +125,6 @@
 			<div class="errorBox">
 				<p>Error loading venue details. (<a href="">try again</a>)</p>
 			</div>
-		</div><!-- content container ends -->
+		</div><!-- // content container ends -->
 	
 	<?php endif; ?>

@@ -157,6 +157,22 @@ a {
 			}
 		}
 		
+		.venuePhotos {
+			overflow: hidden;
+			padding: 10px 0px 10px 0px;
+			border-top: 1px solid lighten($textcolor, 98%);
+			border-bottom: 1px solid lighten($textcolor, 70%);
+			a {
+				overflow: hidden;
+				display: block;
+				width:100px;
+				margin: 0px;
+				float: left;
+				img {
+					margin: 0px;
+				}
+			}
+		}
 	}
 	
 	// -- sidebar container

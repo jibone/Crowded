@@ -32,6 +32,9 @@ a:hover { color: #145672; }
 #bodyContainer #contentContainer .venueDetails .venueContacts { font-size: 14px; }
 #bodyContainer #contentContainer .venueDetails .venueContacts .label { font-size: 10px; text-transform: uppercase; margin-bottom: 3px; }
 #bodyContainer #contentContainer .venueDetails .venueCategories { width: 160px; float: right; overflow: hidden; text-align: right; }
+#bodyContainer #contentContainer .venuePhotos { overflow: hidden; padding: 10px 0px 10px 0px; border-top: 1px solid #fafafa; border-bottom: 1px solid #b3b3b3; }
+#bodyContainer #contentContainer .venuePhotos a { overflow: hidden; display: block; width: 100px; margin: 0px; float: left; }
+#bodyContainer #contentContainer .venuePhotos a img { margin: 0px; }
 #bodyContainer #sidebarContainer { width: 310px; float: right; }
 #bodyContainer #sidebarContainer .formContainer { overflow: hidden; margin-bottom: 20px; padding: 5px; }
 #bodyContainer #sidebarContainer .formContainer input { outline: none; border: 1px solid #fff; background-color: #fff; padding: 3px 5px 4px 5px; font-size: 14px; -moz-box-shadow: 0px 0px 5px #888888; -webkit-box-shadow: 0px 0px 5px #888888; box-shadow: 0px 0px 5px #888888; }

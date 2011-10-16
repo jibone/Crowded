@@ -47,21 +47,19 @@ $app->get('/venue/:venue_id', function ($venue_id) use ($app, $tpl) {
 	$secret = c::get('4sq_secret');
 	$url = "https://api.foursquare.com/v2/venues/". $venue_id ."?client_id=". $id ."&client_secret=". $secret;
 	$data = remote::get($url);
-	echo "<pre>";
-	print_r(json_decode($data));
-	echo "</pre>";
-	//if($data['status'] == 'error') {
-	//	$tpl->error = true;
-	//	$tpl->window_title = "Error...";
-	//} else {
-	//	$tpl->data = json_decode($data);
-	//	$tpl->window_title = "Venue information: ". $tpl->data->response->venue->name;
-	//	$tpl->error = false;
-	//}
-	//
-	//
-	//$tpl->page_content = "venue";
-	//$tpl->display($tpl->path);
+
+	if($data['status'] == 'error') {
+		$tpl->error = true;
+		$tpl->window_title = "Error...";
+	} else {
+		$tpl->data = json_decode($data);
+		$tpl->window_title = "Venue information: ". $tpl->data->response->venue->name;
+		$tpl->error = false;
+	}
+	
+	
+	$tpl->page_content = "venue";
+	$tpl->display($tpl->path);
 	
 });
 

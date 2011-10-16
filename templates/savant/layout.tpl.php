@@ -12,9 +12,9 @@
 	<script type="text/javascript" src="<?php echo $this->base_url; ?>scripts/lib/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="<?php echo $this->base_url; ?>scripts/lib/ejs.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"> </script>
-	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script> 
 	
 	<?php if($this->page_content == "dashboard"): ?>
+	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script> 
 	<script type="text/javascript" src="<?php echo $this->base_url; ?>scripts/crowded.js"></script>
 	<?php endif; ?>
 	
