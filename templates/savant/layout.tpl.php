@@ -19,7 +19,7 @@
 	<?php endif; ?>
 	
 	<?php if($this->page_content == "venue"): ?>
-	<script type="text/javascript" src="<?php echo $this->base_url; ?>scripts/vanue.js"></script>
+	<script type="text/javascript" src="<?php echo $this->base_url; ?>scripts/venue.js"></script>
 	<?php endif; ?>
 	
 </head>
@@ -27,7 +27,7 @@
 	<!-- header container start -->
 	<div id="headerContainer">
 		<div class="pageContainer">
-			<span class="logo">Crowded...</span>
+			<span class="logo"></span>
 		</div>
 	</div><!-- header container ends -->
 	

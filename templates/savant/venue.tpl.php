@@ -89,7 +89,10 @@
 	<!-- sidebar container start -->
 	<div id="sidebarContainer">
 		<!-- mini map container start -->
-		<div id="minimap_canvas">
+		<div id="minimap_canvas" 
+			data-lat="<?php echo $venue->location->lat; ?>" 
+			data-lng="<?php echo $venue->location->lng; ?>" 
+			data-venuename="<?php echo $venue->name; ?>">
 			Map loading...
 		</div><!-- mini map container ends -->
 	</div><!-- sidebar container ends -->

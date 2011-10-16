@@ -190,5 +190,13 @@ a {
 				}
 			}
 		}
+		
+		// -- minimap canvas style
+		#minimap_canvas {
+			padding: 5px;
+			margin: 5px;
+			height: 200px;
+			@include shadowed(0px, 0px, 5px, #888);
+		}
 	}
 }
